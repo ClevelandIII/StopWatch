@@ -1,0 +1,74 @@
+$font: sans-serif, monospace, serif;
+
+@mixin flexCenter($direction, $justify){
+    display: flex;
+    justify-content: $justify;
+    align-items: none;
+    flex-wrap: wrap;
+    flex-direction: $direction;
+}
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+#border{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    background-color: gray;
+    position: relative;
+    border-radius: 50%;
+
+    #time{
+        width: 300px;
+        height: 300px;
+        list-style-type: none;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        text-align: center;
+        #stopwatch{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            text-align: center;
+        }
+    }
+}
+
+#start{
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#lap{
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#lapSpace{
+    position: absolute;
+    top: 70%;
+    left: 47%;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
